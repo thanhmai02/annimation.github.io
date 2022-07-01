@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.annimation {
+    display: flex;
+}
+.ring-item {
+    margin-left: 20px;
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spanner {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+@keyframes sponner {
+    to {
+        transform: scale(1.5);
+        opacity: .1;
+    }
+}
+.ring {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px solid #6a5af9;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: spinner 1s infinite linear ;
+}
+
+.ring2 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px double #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: spinner 1s infinite linear alternate-reverse;
+}
+
+.ring3 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px dotted red;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: spinner 1s infinite ease ;
+}
+
+.ring4 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px inset brown;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: spinner 2s infinite linear ;
+}
+
+.ring5 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px dashed green;
+    border-right: 5px solid transparent;
+    /* border-left: 5px solid transparent; */
+    animation: spinner 2s infinite linear ;
+}
+
+.ring6 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 3px dashed goldenrod;
+    border-right: 5px solid transparent;
+    /* border-left: 5px solid transparent; */
+    animation: spinner 1s infinite linear ;
+}
+
+.ring7 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px solid palevioletred;
+    border-right: 5px solid transparent;
+    /* border-left: 5px solid transparent; */
+    animation: spanner 1s infinite linear ;
+}
+
+.ring8 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px inset gray;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: spanner 1s infinite linear ;
+}
+
+.ring9 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    border: 5px dashed chocolate;
+    /* border-right: 5px solid transparent; */
+    border-left: 5px solid transparent;
+    animation: spanner 2s infinite linear ;
+}
+
+.ring10 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    background-color: palegreen;
+    /* border: 5px dashed chocolate; */
+    /* border-right: 5px solid transparent; */
+    /* border-left: 5px solid transparent; */
+    animation: sponner 2s infinite linear ;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.loader div {
+    position: absolute;
+}
+.loader div:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    background-color: pink;
+    animation: spotter 1s infinite linear;
+    animation-delay: -0.5s;
+}
+
+.loader div:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    background-color:sienna;
+    animation: spotter 1s infinite linear;
+}
+.loader div:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    background-color:pink;
+    animation: spotter2 1s infinite linear;
+    animation-delay: -0.5s;
+}
+@keyframes spotter {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes spotter2 {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    49.99% {
+        opacity: 1;
+        transform: translateX(80px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+.dots-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-left: 100px;
+}
+.dots-loading  div {
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+    background-color: orangered;
+    animation: stagger 0.5s infinite linear alternate;
+    animation-delay: calc(-1 * (0.5 / 4) * var(--delay));
+}
+/* .dots-loading div:first-child {
+    animation-delay: -0.12s;
+}
+.dots-loading div:nth-child(2) {
+    animation-delay: -0.24s;
+    background-color: papayawhip;
+}
+.dots-loading div:nth-child(3) {
+    animation-delay: -0.36s;
+    background-color: #6a5af9;
+}
+.dots-loading div:nth-child(4) {
+    animation-delay: -0.48s;
+
+    background-color: olive;
+} */
+@keyframes stagger {
+    0% {
+        transform: translateY(0);
+    }
+    50%, 100%
+    {
+        transform: translateY(20px);
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    color:#000;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-left: 50px;
+}
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #6a5af9;
+    z-index: -1;
+    /* transition: width 1s ease-in; */
+    transition: height 0.5s linear, width 0.5s ease-in-out 0.5s;
+
+}
+.button:hover:before {
+    width: 100%;
+    height: 100%;
+}
